@@ -1,0 +1,102 @@
+apply plugin: 'com.android.application'
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url "https://jitpack.io" } // 添加jitpack
+    }
+}
+
+android {
+    signingConfigs {
+        agora {
+            storeFile file('../key/agora_key')
+            storePassword 'android'
+            keyAlias = 'agora_key'
+            keyPassword 'android'
+        }
+    }
+    compileSdkVersion 28
+
+    defaultConfig {
+        applicationId "io.agora.openlive"
+        minSdkVersion 16 // JELLY_BEAN
+        targetSdkVersion 28
+        versionCode 9
+        versionName "x.y.z"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            if (buildWithAgoraProjAndroid) {
+                // for local dev, keep the same config with `proj.android`
+                abiFilters = abiFilterFavor.asCollection()
+            } else {
+                // DO NOT MODIFY THIS LINE, IT'S UPDATED BY BUILD MACHINE AUTOMATICALLY
+                abiFilters "arm64-v8a", "armeabi-v7a", "x86"
+            }
+        }
+    }
+
+    if (buildWithAgoraProjAndroid) {
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_8
+            targetCompatibility JavaVersion.VERSION_1_8
+        }
+    } else {
+        // used for verifying the sdk work well in sdk 1.7
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_7
+            targetCompatibility JavaVersion.VERSION_1_7
+        }
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.agora
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.agora
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['src/main/jniLibs']
+        }
+    }
+
+    packagingOptions {
+        doNotStrip "**/*.so"
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+}
+
+dependencies {
+    // DO NOT CHANGE, CI may needs it when packaging
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'org.slf4j:slf4j-api:1.7.21'
+    implementation 'com.github.smarxpan:NotchScreenTool:0.0.1'
+    implementation 'com.github.tony19:logback-android-core:1.1.1-4'
+    implementation('com.github.tony19:logback-android-classic:1.1.1-4') {
+        // workaround issue #73
+        exclude group: 'com.google.android', module: 'android'
+    }
+
+    androidTestImplementation 'com.android.support.test:rules:1.0.2'
+    androidTestImplementation 'com.jayway.android.robotium:robotium-solo:5.6.3'
+
+    if (buildWithAgoraProjAndroid) {
+        implementation project(":proj.android")
+    }
+}
