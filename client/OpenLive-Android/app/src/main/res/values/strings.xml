@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+    <string name="app_name">OpenLive</string>
+
+    <string name="label_confirm">Confirm</string>
+
+    <string name="label_contrast">Ctrs</string>
+
+    <string name="label_lightness">Lgt</string>
+    <string name="label_smoothness">Smth</string>
+    <string name="label_redness">Red</string>
+
+    <string name="label_low">Lo</string>
+    <string name="label_normal">Norm</string>
+    <string name="label_high">High</string>
+
+</resources>

@@ -1,0 +1,19 @@
+include ':app'
+
+// To compile agora-rtc-sdk, add 'buildWithAgoraProjAndroid=true' into `local.properties`
+// Then you can share the same config with `proj.android`
+Properties properties = new Properties()
+
+def localProperties = new File(rootProject.getProjectDir().absolutePath + "/local.properties")
+if (localProperties.exists()) {
+    properties.load(localProperties.newDataInputStream())
+}
+if (properties.getProperty('buildWithAgoraProjAndroid') == "true") {
+    include ':proj.android'
+    // Pay attention pls, default config for repo 'premium-android' was in the same directory with `rte_sdk`!!!
+    // Pay attention pls, default config for repo 'premium-android' was in the same directory with `rte_sdk`!!!
+    // Pay attention pls, default config for repo 'premium-android' was in the same directory with `rte_sdk`!!!
+    project(':proj.android').projectDir = new File(settingsDir, '../../rte_sdk/proj.android')
+} else {
+    include ':libagorartc'
+}
