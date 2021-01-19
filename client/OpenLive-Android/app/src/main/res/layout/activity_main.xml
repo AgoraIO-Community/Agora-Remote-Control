@@ -32,16 +32,6 @@
             android:gravity="center"
             android:hint="Input name of the channel"
             android:inputType="text" />
-        <EditText
-            android:id="@+id/rtm_peerId"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="40dp"
-            android:gravity="center"
-            android:hint="Input the peerId"
-            android:inputType="text" />
         <Button
             android:id="@+id/button_join"
             android:layout_width="wrap_content"

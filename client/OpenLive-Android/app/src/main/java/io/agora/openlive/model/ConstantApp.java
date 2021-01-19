@@ -26,7 +26,6 @@ public class ConstantApp {
     }
 
     public static final String ACTION_KEY_CROLE = "C_Role";
-    public static final String ACTION_KEY_ROOM_NAME = "ecHANEL";
-    public static final String ACTION_KEY_RTM_PEERID = "rtmPeerId";
+    public static final String ACTION_KEY_SERVER_ID = "ecServerId";
 
 }

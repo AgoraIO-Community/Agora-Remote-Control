@@ -46,8 +46,7 @@ public class LiveRoomActivity extends BaseActivity implements AGEventHandler {
     private VideoEncoderConfiguration.VideoDimensions localVideoDimensions = null;
     private HashMap<Integer,VideoStatusData> mAllUserData =  new HashMap<>();
     private final HashMap<Integer, SurfaceView> mUidsList = new HashMap<>(); // uid = 0 || uid == RtcEngineConfig.mUid
-    private String roomName;
-    private String peerId;
+    private String serverId;
     private CloudClient mCloudClient;
 
 
@@ -86,9 +85,7 @@ public class LiveRoomActivity extends BaseActivity implements AGEventHandler {
             throw new RuntimeException("Should not reach here");
         }
 
-        roomName = i.getStringExtra(ConstantApp.ACTION_KEY_ROOM_NAME);
-
-        peerId = i.getStringExtra(ConstantApp.ACTION_KEY_RTM_PEERID);
+        serverId = i.getStringExtra(ConstantApp.ACTION_KEY_SERVER_ID);
         mGridVideoViewContainer = (GridVideoViewContainer) findViewById(R.id.grid_video_view_container);
 
         if (!isBroadcaster(cRole)) {
@@ -101,7 +98,7 @@ public class LiveRoomActivity extends BaseActivity implements AGEventHandler {
             options.autoSubscribeVideo = true;
             options.channelProfile = Constants.CHANNEL_PROFILE_CLOUD_GAMING;
 
-            worker().joinChannel(roomName, config().mUid, options);
+            worker().joinChannel(serverId, config().mUid, options);
 
             if (mCloudClient == null) {
                 mCloudClient = new CloudClient();
@@ -112,7 +109,7 @@ public class LiveRoomActivity extends BaseActivity implements AGEventHandler {
 
 
         TextView textRoomName = (TextView) findViewById(R.id.room_name);
-        textRoomName.setText(roomName);
+        textRoomName.setText(serverId);
     }
 
     @Override
@@ -186,7 +183,7 @@ public class LiveRoomActivity extends BaseActivity implements AGEventHandler {
                             String appId = worker().getAppId();
                             RTMConfig rtmConfig = new RTMConfig();
                             rtmConfig.appId = appId;
-                            rtmConfig.peerId1 = peerId;
+                            rtmConfig.serverId = serverId;
                             mCloudClient.enter(getApplicationContext(), rtmConfig);
                             mCloudClient.updateView(v);
                         }

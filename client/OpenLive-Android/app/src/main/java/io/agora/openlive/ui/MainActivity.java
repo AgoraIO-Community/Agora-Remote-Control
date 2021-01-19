@@ -22,7 +22,6 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void initUIandEvent() {
         EditText textRoomName = (EditText) findViewById(R.id.room_name);
-        EditText textRtmPeerId = (EditText) findViewById(R.id.rtm_peerId);
         findViewById(R.id.button_join).setEnabled(textRoomName.getText().toString().length() != 0);
 
         textRoomName.addTextChangedListener(new TextWatcher() {
@@ -58,14 +57,11 @@ public class MainActivity extends BaseActivity {
 
     public void forwardToLiveRoom(int cRole) {
         final EditText v_room = (EditText) findViewById(R.id.room_name);
-        final EditText rtm_peerId = (EditText) findViewById(R.id.rtm_peerId);
-        String room = v_room.getText().toString();
-        String peerId = rtm_peerId.getText().toString();
+        String serverId = v_room.getText().toString();
 
         Intent i = new Intent(MainActivity.this, LiveRoomActivity.class);
         i.putExtra(ConstantApp.ACTION_KEY_CROLE, cRole);
-        i.putExtra(ConstantApp.ACTION_KEY_ROOM_NAME, room);
-        i.putExtra(ConstantApp.ACTION_KEY_RTM_PEERID,peerId);
+        i.putExtra(ConstantApp.ACTION_KEY_SERVER_ID, serverId);
 
 
         startActivity(i);
