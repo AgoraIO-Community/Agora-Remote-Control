@@ -1,0 +1,7 @@
+${PODS_ROOT}/Target Support Files/Pods-OpenGame-iOS/Pods-OpenGame-iOS-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework
+${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework
+${BUILT_PRODUCTS_DIR}/Toast/Toast.framework
+${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework
+${PODS_ROOT}/../ZeusKit/Libs/AgoraRtcCryptoLoader.framework
+${PODS_ROOT}/../ZeusKit/Libs/AgoraRtcKit.framework

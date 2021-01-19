@@ -1,0 +1,24 @@
+
+#source 'https://github.com/CocoaPods/Specs.git'
+#source 'https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git'
+
+use_frameworks!
+
+workspace 'OpenGame-iOS.xcworkspace'
+
+target 'OpenGame-iOS' do
+
+  platform :ios, '9.0'
+ pod 'Protobuf', '3.14.0'
+ pod 'ZeusKit', :path => './'
+ pod 'Masonry','1.1.0'
+ pod 'Toast', '4.0.0'
+ pod 'YYModel', '1.0.4'
+
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    puts "#{target.name}"
+  end
+end

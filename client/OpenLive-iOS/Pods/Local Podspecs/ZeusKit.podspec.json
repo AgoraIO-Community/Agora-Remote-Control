@@ -1,0 +1,43 @@
+{
+  "name": "ZeusKit",
+  "version": "0.1.0",
+  "summary": "A short description of ZeusKit.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/lienbao/ZeusKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "lienbao": "lienbao@agora.io"
+  },
+  "source": {
+    "git": "https://github.com/lienbao/ZeusKit.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "libraries": [
+    "z",
+    "resolv.9",
+    "c++"
+  ],
+  "frameworks": [
+    "UIKit",
+    "SystemConfiguration",
+    "CoreLocation",
+    "Foundation",
+    "CoreML",
+    "VideoToolbox",
+    "CoreMedia",
+    "CoreAudio",
+    "Accelerate",
+    "CoreTelephony"
+  ],
+  "vendored_frameworks": [
+    "ZeusKit/Libs/*.framework",
+    "ZeusKit/RtmKit/*.framework"
+  ],
+  "vendored_libraries": "ZeusKit/Libs/*.a"
+}

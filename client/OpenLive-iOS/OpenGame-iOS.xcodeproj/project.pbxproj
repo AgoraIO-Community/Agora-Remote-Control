@@ -1,0 +1,417 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8F08785D25B18B34008C4523 /* EventMessage.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F08785C25B18B34008C4523 /* EventMessage.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8FC38CD725885C63006CFAC5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC38CD625885C63006CFAC5 /* AppDelegate.m */; };
+		8FC38CDA25885C63006CFAC5 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC38CD925885C63006CFAC5 /* SceneDelegate.m */; };
+		8FC38CDD25885C63006CFAC5 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC38CDC25885C63006CFAC5 /* MainViewController.m */; };
+		8FC38CE025885C63006CFAC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FC38CDE25885C63006CFAC5 /* Main.storyboard */; };
+		8FC38CE225885C65006CFAC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FC38CE125885C65006CFAC5 /* Assets.xcassets */; };
+		8FC38CE525885C65006CFAC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FC38CE325885C65006CFAC5 /* LaunchScreen.storyboard */; };
+		8FC38CE825885C65006CFAC5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC38CE725885C65006CFAC5 /* main.m */; };
+		E0489CA1DFCD5C394655AEC1 /* Pods_OpenGame_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4DA6C170B4852ACF460655B /* Pods_OpenGame_iOS.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0ECFCA7DB6C41BA1F37A3D1A /* Pods-agora_remote_control_ios_socket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-agora_remote_control_ios_socket.release.xcconfig"; path = "Target Support Files/Pods-agora_remote_control_ios_socket/Pods-agora_remote_control_ios_socket.release.xcconfig"; sourceTree = "<group>"; };
+		32C9DD95233767BB91881FA1 /* Pods-OpenGame-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenGame-iOS.release.xcconfig"; path = "Target Support Files/Pods-OpenGame-iOS/Pods-OpenGame-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		8F08785B25B18B34008C4523 /* EventMessage.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventMessage.pbobjc.h; sourceTree = "<group>"; };
+		8F08785C25B18B34008C4523 /* EventMessage.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventMessage.pbobjc.m; sourceTree = "<group>"; };
+		8FC38CD225885C63006CFAC5 /* OpenGame-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OpenGame-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FC38CD525885C63006CFAC5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8FC38CD625885C63006CFAC5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8FC38CD825885C63006CFAC5 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		8FC38CD925885C63006CFAC5 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		8FC38CDB25885C63006CFAC5 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		8FC38CDC25885C63006CFAC5 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		8FC38CDF25885C63006CFAC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8FC38CE125885C65006CFAC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8FC38CE425885C65006CFAC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8FC38CE625885C65006CFAC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FC38CE725885C65006CFAC5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C0892F34F0F45428BEE42ADE /* Pods-agora_remote_control_ios_socket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-agora_remote_control_ios_socket.debug.xcconfig"; path = "Target Support Files/Pods-agora_remote_control_ios_socket/Pods-agora_remote_control_ios_socket.debug.xcconfig"; sourceTree = "<group>"; };
+		E9E4D6CA97414C4627BA3750 /* Pods-OpenGame-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenGame-iOS.debug.xcconfig"; path = "Target Support Files/Pods-OpenGame-iOS/Pods-OpenGame-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		F4DA6C170B4852ACF460655B /* Pods_OpenGame_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpenGame_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8FC38CCF25885C63006CFAC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0489CA1DFCD5C394655AEC1 /* Pods_OpenGame_iOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		11F85890CF5F468778B3ACE4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F4DA6C170B4852ACF460655B /* Pods_OpenGame_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8FC38CC925885C63006CFAC5 = {
+			isa = PBXGroup;
+			children = (
+				8FC38CD425885C63006CFAC5 /* agora_remote_control_ios_socket */,
+				8FC38CD325885C63006CFAC5 /* Products */,
+				9C2BBE47E694AB58B5E60E3F /* Pods */,
+				11F85890CF5F468778B3ACE4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8FC38CD325885C63006CFAC5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8FC38CD225885C63006CFAC5 /* OpenGame-iOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8FC38CD425885C63006CFAC5 /* agora_remote_control_ios_socket */ = {
+			isa = PBXGroup;
+			children = (
+				8F08785B25B18B34008C4523 /* EventMessage.pbobjc.h */,
+				8F08785C25B18B34008C4523 /* EventMessage.pbobjc.m */,
+				8FC38CD525885C63006CFAC5 /* AppDelegate.h */,
+				8FC38CD625885C63006CFAC5 /* AppDelegate.m */,
+				8FC38CD825885C63006CFAC5 /* SceneDelegate.h */,
+				8FC38CD925885C63006CFAC5 /* SceneDelegate.m */,
+				8FC38CDB25885C63006CFAC5 /* MainViewController.h */,
+				8FC38CDC25885C63006CFAC5 /* MainViewController.m */,
+				8FC38CDE25885C63006CFAC5 /* Main.storyboard */,
+				8FC38CE125885C65006CFAC5 /* Assets.xcassets */,
+				8FC38CE325885C65006CFAC5 /* LaunchScreen.storyboard */,
+				8FC38CE625885C65006CFAC5 /* Info.plist */,
+				8FC38CE725885C65006CFAC5 /* main.m */,
+			);
+			path = agora_remote_control_ios_socket;
+			sourceTree = "<group>";
+		};
+		9C2BBE47E694AB58B5E60E3F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C0892F34F0F45428BEE42ADE /* Pods-agora_remote_control_ios_socket.debug.xcconfig */,
+				0ECFCA7DB6C41BA1F37A3D1A /* Pods-agora_remote_control_ios_socket.release.xcconfig */,
+				E9E4D6CA97414C4627BA3750 /* Pods-OpenGame-iOS.debug.xcconfig */,
+				32C9DD95233767BB91881FA1 /* Pods-OpenGame-iOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8FC38CD125885C63006CFAC5 /* OpenGame-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8FC38CEB25885C65006CFAC5 /* Build configuration list for PBXNativeTarget "OpenGame-iOS" */;
+			buildPhases = (
+				7915874F7A74B13E95229001 /* [CP] Check Pods Manifest.lock */,
+				8FC38CCE25885C63006CFAC5 /* Sources */,
+				8FC38CCF25885C63006CFAC5 /* Frameworks */,
+				8FC38CD025885C63006CFAC5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "OpenGame-iOS";
+			productName = agora_remote_control_ios_socket;
+			productReference = 8FC38CD225885C63006CFAC5 /* OpenGame-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8FC38CCA25885C63006CFAC5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					8FC38CD125885C63006CFAC5 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+				};
+			};
+			buildConfigurationList = 8FC38CCD25885C63006CFAC5 /* Build configuration list for PBXProject "OpenGame-iOS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8FC38CC925885C63006CFAC5;
+			productRefGroup = 8FC38CD325885C63006CFAC5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8FC38CD125885C63006CFAC5 /* OpenGame-iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8FC38CD025885C63006CFAC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FC38CE525885C65006CFAC5 /* LaunchScreen.storyboard in Resources */,
+				8FC38CE225885C65006CFAC5 /* Assets.xcassets in Resources */,
+				8FC38CE025885C63006CFAC5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7915874F7A74B13E95229001 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OpenGame-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8FC38CCE25885C63006CFAC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FC38CDD25885C63006CFAC5 /* MainViewController.m in Sources */,
+				8FC38CD725885C63006CFAC5 /* AppDelegate.m in Sources */,
+				8FC38CE825885C65006CFAC5 /* main.m in Sources */,
+				8F08785D25B18B34008C4523 /* EventMessage.pbobjc.m in Sources */,
+				8FC38CDA25885C63006CFAC5 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8FC38CDE25885C63006CFAC5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8FC38CDF25885C63006CFAC5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8FC38CE325885C65006CFAC5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8FC38CE425885C65006CFAC5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8FC38CE925885C65006CFAC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8FC38CEA25885C65006CFAC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8FC38CEC25885C65006CFAC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9E4D6CA97414C4627BA3750 /* Pods-OpenGame-iOS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 5459N9W32M;
+				INFOPLIST_FILE = agora_remote_control_ios_socket/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.agora.openGame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = AgoraTest2020;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8FC38CED25885C65006CFAC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32C9DD95233767BB91881FA1 /* Pods-OpenGame-iOS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 5459N9W32M;
+				INFOPLIST_FILE = agora_remote_control_ios_socket/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.agora.openGame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = AgoraTest2020;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8FC38CCD25885C63006CFAC5 /* Build configuration list for PBXProject "OpenGame-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FC38CE925885C65006CFAC5 /* Debug */,
+				8FC38CEA25885C65006CFAC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8FC38CEB25885C65006CFAC5 /* Build configuration list for PBXNativeTarget "OpenGame-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FC38CEC25885C65006CFAC5 /* Debug */,
+				8FC38CED25885C65006CFAC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8FC38CCA25885C63006CFAC5 /* Project object */;
+}
