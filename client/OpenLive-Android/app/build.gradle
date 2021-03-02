@@ -92,6 +92,7 @@ dependencies {
         // workaround issue #73
         exclude group: 'com.google.android', module: 'android'
     }
+    //implementation fileTree(dir: 'D:\\1.project.repo.github\\Agora-Remote-Control\\client\\OpenLive-Android\\app\\libs', include: ['*.aar', '*.jar'], exclude: [])
 
     androidTestImplementation 'com.android.support.test:rules:1.0.2'
     androidTestImplementation 'com.jayway.android.robotium:robotium-solo:5.6.3'

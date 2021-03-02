@@ -47,6 +47,7 @@ const calcLogicPos = (canvasWidth, canvasHeight, streamWidth, streamHeight, clie
   return {logicX, logicY};
 };
 
+
 const bindControlEvents = () => {
   let downEvent = useTouch ? "touchstart" : "mousedown";
   let moveEvent = useTouch ? "touchmove" : "mousemove";
@@ -93,6 +94,7 @@ const bindControlEvents = () => {
         rawMessage: binary,
         messageType: AgoraRTM.MessageType.RAW
       });
+      //console.log(message);
       await rtmClient.sendMessageToPeer(message, serverId);
       //console.log(`mousedown sent ${logicX} ${logicY} ${binary} ${JSON.stringify(uplink.toObject())}`);
     } else {
@@ -140,6 +142,7 @@ const bindControlEvents = () => {
         rawMessage: binary,
         messageType: AgoraRTM.MessageType.RAW
       });
+      //console.log(message);
       await rtmClient.sendMessageToPeer(message, serverId);
       //console.log(`mousemove sent ${logicX} ${logicY} ${binary} ${JSON.stringify(uplink.toObject())}`);
     } else {
@@ -188,6 +191,7 @@ const bindControlEvents = () => {
         rawMessage: binary,
         messageType: AgoraRTM.MessageType.RAW
       });
+      //console.log(message);
       await rtmClient.sendMessageToPeer(message, serverId);
       //console.log(`mouseup sent ${logicX} ${logicY} ${binary} ${JSON.stringify(uplink.toObject())}`);
     } else {
@@ -196,12 +200,11 @@ const bindControlEvents = () => {
   });
 };
 
-
 const initRTC = () => {
   return new Promise((resolve, reject) => {
     // init rtcClient
     rtcClient.init(appID, () => {
-      console.log('init success');
+      console.log('rtc init success');
 
 
       rtcClient.on("stream-added", e => {
@@ -213,16 +216,25 @@ const initRTC = () => {
         let uid = stream.getId();
 
         stream.on('player-status-change', e => {
-          console.log('remote player ' + uid + ' status change', e);
-          if(e.mediaType === "video" && e.status === "play") {
-            let elements = $("#remote-video-container video");
-            let width = elements[0].videoWidth;
-            let height = elements[0].videoHeight;
-            remoteStreamWidth = width;
-            remoteStreamHeight = height;
-          }
+          console.log('on player-status-change ' + uid + ' status change', e);
+          // if(e.mediaType === "video" && e.status === "play") {
+          //   let elements = $("#remote-video-container video");
+          //   let width = elements[0].videoWidth;
+          //   let height = elements[0].videoHeight;
+          //   remoteStreamWidth = width;
+          //   remoteStreamHeight = height;
+          //   console.log('video size ' + width + " x " + height);
+          // }
         });
         stream.play("remote-video-container", {fit:"contain"});
+      });
+
+      rtcClient.on('first-video-frame-decode', function (evt) {
+        console.log('on first-video-frame-decode');
+        console.log(evt.stream);
+        console.log('screenAttributes:' + evt.stream.screenAttributes);
+        remoteStreamWidth = evt.stream.screenAttributes.width;
+        remoteStreamHeight = evt.stream.screenAttributes.height;
       });
 
       // rtcClient.on("stream-removed", function onStreamRemoved(e) {
@@ -261,7 +273,7 @@ const initRTC = () => {
       *      If you use a number as the user ID, it should be a 32-bit unsigned integer with a value ranging from 0 to (232-1).
       **/
       rtcClient.join(token ? token : null, serverId, uid ? uid : null, uid => {
-        console.log('join server: ' + serverId + ' success, uid: ' + uid);
+        console.log('rtc join channel: "' + serverId + '" success, uid: ' + uid);
         resolve();
       }, err => {
         reject(err);
@@ -310,7 +322,7 @@ function serializeformData() {
 var fields = ["appID", "serverId"];
 
 $("#join").on("click", function (e) {
-  console.log("join");
+  console.log("join button clicked");
   
   e.preventDefault();
   var params = serializeformData(); // Data is feteched and serilized from the form element.
